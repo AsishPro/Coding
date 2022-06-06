@@ -23,6 +23,7 @@ void quicksort(int a[],int start,int end){
       quicksort(a,j+1,end);
    }
 }
+}
 int main(){
    int n;
    printf("Enter the Number of Elements:");
