@@ -1,0 +1,12 @@
+gui - displays graphic elements ,hides code , made up of packs of widgets and attributes
+label - a widget which user cannot interact unlike button 
+attributes - which can be used to label and packs
+
+#label options
+text- adds text
+bg - backround
+fg - foreground
+font - sets font
+padx - x padding
+pady - y padding
+relief - border styling - SUNKEN,raised, groove ridge

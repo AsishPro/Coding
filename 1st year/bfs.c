@@ -5,7 +5,7 @@ void bfs(int vertex){
     printf("%d\t",vertex);
     visited[vertex]=1;
     for(x=0;x<n;x++){
-            if(!visited[x] && graph[vertex][x]==1){
+        if(!visited[x] && graph[vertex][x]==1){
                 bfs(x);
             }
         }

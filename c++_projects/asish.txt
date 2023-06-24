@@ -1,0 +1,7 @@
+1 2 asish
+2 3 manoj
+5 6 raj
+7 9 zithin
+7 8 asish
+9 10 kumar yadav
+0 0 cool

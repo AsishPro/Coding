@@ -1,0 +1,8 @@
+/* can be used for differnt html files */
+/* only styles foo id - # used */
+
+/* class also used to style same elements - .class used */
+#foo {
+    color:rgb(0, 198, 248);
+    text-align:center;
+}

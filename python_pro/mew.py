@@ -1,0 +1,7 @@
+str=(ord("Â")-ord('a'))
+print(chr(128))
+print(ord('z'))
+print(chr(str))
+# print(str.encode())
+# str=str.encode()
+# print(str.decode())
