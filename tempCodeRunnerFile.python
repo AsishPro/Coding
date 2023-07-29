@@ -1,0 +1,6 @@
+# d={1:"asish",2:"Mnaoj",3:3}
+# k=dict(zip(d.values(),d.keys()))
+# print(k)
+
+k="asish"
+print(k[-5:2])

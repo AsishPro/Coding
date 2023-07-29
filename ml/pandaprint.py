@@ -1,6 +1,8 @@
 import pandas as pd
 
 df = pd.read_csv("tvmarketing.csv")
+# print(df.columns)
+
 # k=df.to_string(index=False)
 # print(type(k[0][1]))
 

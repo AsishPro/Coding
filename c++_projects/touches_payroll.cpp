@@ -1,9 +1,7 @@
 /* C++ Project -4 Employee Payroll Management System
-P Asish Manoj Reddy Cse N
-AP21110011239 
-Group 15 */
+P Asish Manoj Reddy 
 //username,password - asish
-//sometimes goto function glitches but have to run again
+*/
 
 #include <iostream>
 #include <string>

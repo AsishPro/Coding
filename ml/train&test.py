@@ -21,7 +21,7 @@ def find_cfs(df,x):
     # print(x,end=ln)
     # print(x.T,end=ln)
 
-    product=np.dot(x.T,x)  #x@xT can also be used
+    product= np.dot(x.T,x)  #x@xT can also be used
     # print(product,end=ln)
 
     I = np.linalg.inv(product)
@@ -35,13 +35,15 @@ def split(df):
     l=[]
     n=(len(df.columns))-1
     for i in range(len(df)):
-        l.append([1,*df.iloc[i,:n]])
+        l.append([1,*df.iloc[i,:n]]) #can also use df.iloc[i,:-1]
     x=np.array(l)
     return x
 
 def routine(df):
     #getting x,y and a matrix
     x=split(df)
+    print(x)
+
     a=find_cfs(df,x)
     print(a,end=ln)
     y=np.array(df.iloc[:,-1])
