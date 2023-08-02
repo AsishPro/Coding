@@ -5,7 +5,7 @@ y=np.array([[0],[1],[1],[0]])
 
 
 input_nodes=2
-hidden_nodes=2
+hidden_nodes=4
 output_nodes=1
 
 w1=np.random.uniform(low=-1,high=1,size=(input_nodes,hidden_nodes))
