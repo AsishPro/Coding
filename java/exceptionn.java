@@ -17,7 +17,7 @@ class test{
 class exceptionn {
    public static void main(String[] args){
       try{
-        test.validate();
+        take2.validate();
       }
       catch(Exception o){
         System.out.print(o);
