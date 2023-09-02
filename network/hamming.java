@@ -5,13 +5,11 @@ public class hamming {
     int r=1;
         while(true){
             if(Math.pow(2,r)>=m+r+1){
-                System.out.print(r);
-                break;
+                return r;
             }
-        else
+            else
              r++;
         }
-        return r;
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);

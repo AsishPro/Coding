@@ -4,6 +4,7 @@
 -- create table Employee(empno int,ename varchar(20),job varchar(20),mgr int,Sal int,Commision int)-- 
 -- show tables
 -- describe Employee
+# a. insert 3 records
 -- insert into Employee values(101,'Asish','Manager',NULL,200000,NULL)
 -- insert into Employee values(102,'Roop','assistant',101,100000,200)
 -- insert into Employee values(103,'Pujitha','sales',101,150000,500)
@@ -14,7 +15,7 @@
 -- describe Employee
 
 -- select * from Employee
-# trying to add not null constraint to mgr (which has null)
+# b. trying to add not null constraint to mgr (which has null)
 -- alter table Employee
 -- modify mgr int not null
 
@@ -22,10 +23,10 @@
 -- modify empno int not null
 -- describe Employee
 
-# trying to insert null values
+# c. trying to insert null values
 -- insert into Employee(empno) values(NULL)
 
-# adding one more column
+# d. adding one more column
 -- alter table Employee
 -- add column Commision_new int
 
@@ -34,7 +35,7 @@
 -- where empno=101
 
 
-# adding 5 more records
+# e. adding 5 more records
 -- insert into Employee values(104,'Roger','Sales',101,10000,100,30)
 -- insert into Employee 
 -- values
@@ -44,18 +45,18 @@
 -- (112,'Rajiv','Engineer',101,3500,100,70);
 	 
 
-# update job column
+# f. update job column
 -- update Employee
 -- set job='pa'
 -- where empno=103
 
 -- select * from Employee where job='pa'
 
-# change column name
+# g. change column name
 -- alter table Employee
 -- change mgr managerid int
 -- describe Employee
 
-# delete a row
+# h. delete a row
 -- delete from Employee
 -- where empno=104;

@@ -12,7 +12,7 @@ def derivative(x):
     # return x*(1-x)
 
 
-df = pd.read_csv("power.csv")
+df = pd.read_csv(".csv")
 df.head()
 x = df.drop("PE", axis=1).values
 y = df["PE"].values
