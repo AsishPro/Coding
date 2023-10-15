@@ -1,0 +1,2 @@
+This is var2 text file which can be used for linear regression.
+this is second line

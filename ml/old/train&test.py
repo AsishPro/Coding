@@ -91,8 +91,3 @@ print(test,end="\n\n")
 mae=test['error'].sum()/len(test)
 mape=test['pe'].sum()/len(test)
 print(f"\nmae and mape are :{mae,mape}, accuaracy: {100-mape}\n\n")
-
-
-
-
-

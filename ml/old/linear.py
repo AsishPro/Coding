@@ -20,7 +20,6 @@ def first(d):
     d['xy']=list(map(lambda a,b:a*b,x,y))
     sum_xy=d['xy'].sum()
     # print(sum_xy)
-      
     # print(d)
 
     b1=((n*sum_xy)-(sum_x*sum_y))/((n*sum_sq)-(sum_x)**2) #slope
@@ -28,22 +27,11 @@ def first(d):
     b0=mean_y-b1*mean_x
     print(f"b0 offset :{b0}")
 
-    
-    
-    # print(sum_x)
-   
 
-
-df=pd.read_csv("tvmarketing.csv")
+df=pd.read_csv("tvlist.csv")
 
 # print(df)
 b1=first(df)
-
-
-
-
-
-
 
 
 

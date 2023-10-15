@@ -24,7 +24,7 @@ public class remainder{
     void rem(int index){
         int k=B.length();
         result=A.substring(0,k);
-        int j=k;
+        int j=k; 
         for(int i=0;i<A.length();){
             String temp="";
             for(int z=0;z<k;z++){

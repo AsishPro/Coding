@@ -12,9 +12,9 @@ public class rem2{
     }
     int reset(){
         int c=0;
-        while(c<res.length() && res.charAt(c)!='1'){
-            c++;
-        }
+            while(c<res.length() && res.charAt(c)!='1'){
+                c++;
+            }
         res=res.substring(c,res.length());
         return c;
     }
@@ -43,13 +43,12 @@ public class rem2{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         String s=sc.nextLine();
-        String temp=s;
         String b=sc.nextLine();
+        String temp=s;
         s=rem2.dividend(s, b);
         rem2 o1=new rem2(s,b);
         String crc=o1.crc(0);
-        System.out.print(crc);
-        // System.out.println("crc: "+crc);
-        // System.out.println("codeword :"+temp+crc);
+        System.out.println("crc: "+crc);
+        System.out.println("codeword :"+temp+crc);
     }
 }

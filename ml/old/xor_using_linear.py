@@ -44,8 +44,6 @@ print(res)
 
 
 xor=np.array([1,0,1])
-
-
 print(xor.dot(res.T))
 
 

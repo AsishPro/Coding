@@ -46,8 +46,6 @@ for j in range(1000):
         b1+=l*(hidden_e)    
 
 
-
-
 def predict(x):
     hidden_o=act(np.dot(i,w1)+b1) #1x4
     final_o=act(np.dot(hidden_o,w2)+b2)

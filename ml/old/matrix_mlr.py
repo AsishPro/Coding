@@ -13,7 +13,7 @@ import numpy as np
 # # Print the resulting matrix
 # print("Matrix:\n", matrix)
 
-df=pd.read_csv("tvmarketing.csv")
+df=pd.read_csv("tvlist.csv")
 
 print(df)
 print()
@@ -23,7 +23,9 @@ l=[]
 n=(len(df.columns))-1
 for i in range(len(df)):
    l.append([1,*df.iloc[i,:n]])
+print(l)
 x=np.array(l)
+# print(x)
 # print(x)
 # print()
 
