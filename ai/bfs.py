@@ -36,19 +36,3 @@ for i in range(n):     #loop taken because to check disconnected components
     if not v[i]:
         bfs(ans,edges,i)
 print(ans) 
-
-
-        
-                
-
-
-
-
-
-
-
-
-    
-
-
-

@@ -30,4 +30,3 @@ for i in range(n):
             m=max(m,v[i]+v[j])
 
 print(m)
-

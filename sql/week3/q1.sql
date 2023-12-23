@@ -40,5 +40,18 @@ where ename like 'a%' or ename like 's%';
 
 #f)
 select ename from employee
-where Sal>5000
+where Sal>5000;
 
+
+#week3
+use dbms;
+select * from employee;
+select ename from employee where deptno=10;
+select ename,avg(Sal) from employee where deptno=10 group by ename;
+select deptno,avg(Sal) from employee group by deptno;
+
+
+select deptno,count(*) from employee group by deptno;
+select * from employee where Sal in (select max(Sal) from employee);
+
+select * from employee where ename in (select max(ename) from employee);

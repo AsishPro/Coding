@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def first(d):
     n=len(d)
     print(n)
@@ -20,7 +19,7 @@ def first(d):
     d['xy']=list(map(lambda a,b:a*b,x,y))
     sum_xy=d['xy'].sum()
     # print(sum_xy)
-    # print(d)
+    print(d)
 
     b1=((n*sum_xy)-(sum_x*sum_y))/((n*sum_sq)-(sum_x)**2) #slope
     print(f"b1 slope :{b1}")

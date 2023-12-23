@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as pt
 
-# #to give seperate lines then
+#to give seperate lines then
 # x=np.array([1,2,3])
 # y=np.array([2,0,4])
 # x2=np.array([1,2,3])

@@ -36,6 +36,7 @@ y=np.array(df.iloc[:,-1])  #y matrix
 print(x)
 print(x.T)
 print()
+
 product=np.dot(x.T,x)  #x@xT can also be used
 print(product)
 I = np.linalg.inv(product)

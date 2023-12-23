@@ -40,15 +40,5 @@ public class rem2{
         }
         return s;
     }
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        String s=sc.nextLine();
-        String b=sc.nextLine();
-        String temp=s;
-        s=rem2.dividend(s, b);
-        rem2 o1=new rem2(s,b);
-        String crc=o1.crc(0);
-        System.out.println("crc: "+crc);
-        System.out.println("codeword :"+temp+crc);
-    }
+   
 }

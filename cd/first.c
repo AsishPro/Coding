@@ -23,9 +23,9 @@ int main(int argc, char **argv)
 	char c, ch; 
 	count = 8; 
 	
-	strcpy(production[0], "E=TR"); 
-	strcpy(production[1], "R=+TR"); 
-	strcpy(production[2], "R=#"); 
+	strcpy(production[0], "E=+TR"); 
+	strcpy(production[2], "E=TR"); 
+	strcpy(production[1], "RR=#"); 
 	strcpy(production[3], "T=FY"); 
 	strcpy(production[4], "Y=*FY"); 
 	strcpy(production[5], "Y=#"); 
@@ -87,7 +87,7 @@ int main(int argc, char **argv)
 	} 
 	printf("\n"); 
 
-}
+}	
 void findfirst(char c, int q1, int q2) 
 { 
 	int j; 
@@ -126,6 +126,6 @@ void findfirst(char c, int q1, int q2)
 				// at the beginning 
 				findfirst(production[j][2], j, 3); 
 			} 
-		} 
+		}  
 	} 
 }

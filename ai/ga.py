@@ -1,5 +1,5 @@
 import numpy as np
-
+import pandas as pd
 #everything is generated randomly
 #algorithm:
 #1.generate distance(randomly)
@@ -17,6 +17,7 @@ import numpy as np
 # initial population
 def ini_population(population_size, n):
     return np.array([np.random.permutation(n) for i in range(population_size)])
+
 # print(population(population_size,n))
 
 # distance of a path
@@ -55,8 +56,12 @@ def find_fitness(population,distances):
 def GA(distances, population_size, mutation_rate, generations):
     population = ini_population(population_size, n) #make population
     for generation in range(generations):
+        # print(len(population))
         fitness = find_fitness(population,distances)
+        # print(fitness) #finds the fitness for 100 popu
         parents = population[np.random.choice(population_size, size=population_size, p=fitness/fitness.sum())]
+        # print(pd.DataFrame(parents).value_counts())
+
         children = []
         for i in range(0,population_size,2):
             p1, p2 = parents[i], parents[i + 1]
@@ -84,7 +89,7 @@ print(distances)
 population_size = 100
 #to mutate randomly
 mutation_rate = 0.01 
-num_generations = 100
+num_generations = 10
 
 best_path, best_distance = GA(distances, population_size, mutation_rate, num_generations)
 print("Best path:", best_path)

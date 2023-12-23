@@ -1,0 +1,4 @@
+digraph NFA {
+  0 [label="Start", shape=circle]
+  1 [label="Accept", shape=doublecircle]
+}
