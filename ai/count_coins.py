@@ -1,4 +1,5 @@
 def recur(sum,s,t,i):
+    print(sum,i)
     if sum==t:
         return 1
     if sum>t or i==len(s):
