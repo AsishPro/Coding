@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plots and DataFrame</title>
+</head>
+<body>
+    <h1>Plot</h1>
+    <img src="data:image/png;base64,{{ plot }}" alt="Plot">
+
+    <h1>DataFrame</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in dataframe %}
+            <tr>
+                <td>{{ row.x }}</td>
+                <td>{{ row.y }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

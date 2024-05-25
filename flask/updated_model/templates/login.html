@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login_auth</title>
+        <style>
+           
+            .one{
+                display: inline-flex;
+                /* background-color: red; */  
+            }
+        </style>
+    </head>
+    <body>
+        <!-- post method hides ,get method shows  -->
+        <form action="/form_login" method="post">
+            <div>
+                <p class="one">Username:</p>
+                <input class="one" type="text" name="username" required>
+                <br>
+                <p class="one">Password:</p>
+                <input type="password" name="pass" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div>
+            <h1>{{info}}</h1>
+        </div>
+        
+    </body>
+</html>

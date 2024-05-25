@@ -1,1 +1,0 @@
- print(m,i,ans)

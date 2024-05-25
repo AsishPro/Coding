@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px; /* Add some spacing between label and input */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="digits"] {
+            display: block;
+            margin-bottom: 10px; /* Add some spacing between input fields */
+        }
+
+    </style>
+</head>
+<body>
+    <form name="myForm" action="/register" method="post" onsubmit="return validateForm()">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" required>
+
+        <!-- <label for="lname">Last Name:</label>
+        <input type="text" name="lname" required> -->
+<!-- 
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phno">Phone Number:</label>
+        <input type="text" name="phno" required>
+ -->
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" required>
+
+        <input type="submit" value="generate otp" >
+    </form>
+
+    {% if otp %}
+    <div>
+        <form name="otpform" action="/validate_otp" method="post">
+            <label>Enter the otp: </label>
+            <input type="text" name="otp" required>
+            <input type="submit" value="submit otp" >
+        </form>
+    </div>
+    {% endif %}
+
+    
+
+    <!-- <script src="/static/register.js"></script> -->
+</body>
+</html>

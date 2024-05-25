@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('health_care image.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: inherit;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: blur(4px); /*blur efffect */
+            z-index: -1; /making sure background image is back of the login form blurred/
+        }
+
+        .Wrapper {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency to your preference */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* it's above the blurred background */
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-box input:focus {
+            outline: none;
+            border-color: #66afe9;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .register-link a:hover {
+            color: #0056b3;
+        }
+
+        .illustration {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .welcome-message {
+            font-size: 18px;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container"></div> <!-- Add this container for the blurred background -->
+    <div class="Wrapper">
+        <img src="/mark6 register +otp/static/images/Health_care logo.png" alt="Healthcare Logo" class="logo" width="100">
+        
+        <!-- Login Form -->
+        <form action="">
+            <h1> Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#registration">Register</a></p>
+            </div>
+        </form>
+        
+        <!-- Registration Form -->
+        <form id="registration" style="display:none;">
+            <h1> Register</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="#">Login</a></p>
+            </div>
+        </form>
+        
+        <p class="welcome-message">🏥 Welcome to our Predictive Healthcare Monitoring System! 🚑</p>
+    </div>
+    
+    <!-- JavaScript to toggle between login and registration forms -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var loginForm = document.querySelector('form[action=""]');
+            var registrationForm = document.getElementById('registration');
+    
+            function toggleForms() {
+                loginForm.style.display = (loginForm.style.display === 'none') ? 'block' : 'none';
+                registrationForm.style.display = (registrationForm.style.display === 'none') ? 'block' : 'none';
+            }
+    
+            var registerLinks = document.querySelectorAll('.register-link a');
+            registerLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    toggleForms();
+                });
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

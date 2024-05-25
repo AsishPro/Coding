@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Dropdown List</title>
+</head>
+<body>
+    <h2>Select a Fruit</h2>
+    <input type="text" id="searchInput" placeholder="Search for a fruit..">
+    <select id="fruitSelect">
+        {% for item in items %}
+        <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input, filter, select, option, i;
+            input = this.value.toUpperCase();
+            select = document.getElementById('fruitSelect');
+            for (i = 0; i < select.options.length; i++) {
+                option = select.options[i];
+                if (option.text.toUpperCase().indexOf(input) > -1) {
+                    option.style.display = '';
+                } else {
+                    option.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

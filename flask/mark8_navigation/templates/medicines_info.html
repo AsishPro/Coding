@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information</title>
+    <style>
+
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Information</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Medicine</th>
+                    <th>Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for medicine,inf in medicines %}
+                <tr>
+                    <td>{{ medicine }}</td>
+                    <td>{{ inf}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <form action="/medicines_list" method="get">
+            <input type="submit" value="Go Back">
+        </form>
+    </div>
+</body>
+</html> -->
+
+
+<!-- layout2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information</title>
+    <style>
+        .container {
+            
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .medicine-box {
+            width: 45%;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .medicine-box:nth-child(even) {
+            margin-left: 10px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .medicine {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    {% include 'navbar.html' %}
+    
+    <div class="container">
+        <h1>Medicines Information</h1>
+        
+        {% for medicine, inf in medicines %}
+        <div class="medicine-box">
+            <p class="medicine">{{ medicine }}</p>
+            <p>{{ inf }}</p>
+        </div>
+        {% endfor %}
+
+        <div class="clear"></div>
+        
+        <form action="/medicines_list" method="get">
+            <input type="submit" value="Go Back">
+        </form>
+    </div>
+</body>
+</html>
