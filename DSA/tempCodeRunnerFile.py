@@ -1,1 +1,0 @@
-print(target-i,x)
